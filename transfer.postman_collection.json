@@ -1,0 +1,307 @@
+{
+	"info": {
+		"_postman_id": "df0d5098-8003-4d9f-ab50-9f3cbba6900b",
+		"name": "transfer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "transf",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"accountFromId\": 1,\n    \"accountToId\": 2,\n    \"amount\": 100\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4567/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dd15911b-852f-47ae-9630-b117413bf1d1",
+						"exec": [
+							"{",
+							"    \"id\": 1",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"balance\": 1000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4567/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get accounts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dd15911b-852f-47ae-9630-b117413bf1d1",
+						"exec": [
+							"{",
+							"    \"id\": 1",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"balance\": 1000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4567/accounts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get account transactions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dd15911b-852f-47ae-9630-b117413bf1d1",
+						"exec": [
+							"{",
+							"    \"id\": 1",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"balance\": 1000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4567/accounts/1/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"accounts",
+						"1",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get account by Id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dd15911b-852f-47ae-9630-b117413bf1d1",
+						"exec": [
+							"{",
+							"    \"id\": 1",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"balance\": 1000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4567/accounts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"accounts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get account by Id balance",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "dd15911b-852f-47ae-9630-b117413bf1d1",
+						"exec": [
+							"{",
+							"    \"id\": 1",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"balance\": 1000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4567/accounts/1/balance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4567",
+					"path": [
+						"accounts",
+						"1",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
